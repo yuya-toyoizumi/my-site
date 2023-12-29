@@ -33,7 +33,7 @@ export const Header = () => {
             <div className="hidden sm:ml-12 sm:flex sm:items-center">
               <div className="space-x-6 text-sm font-medium">
                 <Link href="/">Home</Link>
-                <Link href="/about">About</Link>
+                <Link href="/works">works</Link>
               </div>
             </div>
           </div>
@@ -45,7 +45,7 @@ export const Header = () => {
         id="mobile-menu"
       >
         <div className="flex flex-col pt-2 pb-6 space-y-4 border-b border-gray-200 px-2">
-          <Link href="/about">about</Link>
+          <Link href="/works">works</Link>
         </div>
       </div>
     </nav>
