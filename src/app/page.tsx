@@ -1,11 +1,12 @@
-import Image from "next/image";
-import { Header } from '../components/header.tsx';
+import { Header } from '../components/header';
 
 export default function Home() {
   return (
     <>
-      <Header /> 
-      <div>content</div>
+      <Header />
+      <div className='container max-w-3xl mx-auto px-4'>
+        <p>content</p>
+      </div>
     </>
   );
 }
