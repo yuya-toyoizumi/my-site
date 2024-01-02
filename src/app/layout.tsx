@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Courier_Prime } from "next/font/google";
 import "./globals.css";
+import { Header } from "@/components/header";
 
 const courierPrime = Courier_Prime({
   weight: ["400", "700"],
@@ -19,7 +20,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={courierPrime.className}>{children}</body>
+      <body className={courierPrime.className}>
+        <Header />
+        <div className='container max-w-3xl mx-auto px-4'>
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
