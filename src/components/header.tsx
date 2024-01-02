@@ -32,9 +32,8 @@ export const Header = () => {
             </div>
             <div className="hidden sm:ml-12 sm:flex sm:items-center">
               <div className="space-x-6">
-                <Link href="/">Home</Link>
                 <Link href="/works">works</Link>
-                <Link href="/posts">posts</Link>
+                <Link href="/notes">notes</Link>
                 <Link href="/uses">uses</Link>
               </div>
             </div>
@@ -48,7 +47,7 @@ export const Header = () => {
       >
         <div className="flex flex-col pt-2 pb-6 space-y-4 border-b border-gray-200 px-2">
           <Link href="/works">works</Link>
-          <Link href="/posts">posts</Link>
+          <Link href="/notes">notes</Link>
           <Link href="/uses">uses</Link>
         </div>
       </div>
