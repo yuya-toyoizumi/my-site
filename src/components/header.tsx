@@ -26,12 +26,12 @@ export const Header = () => {
           </div>
           <div className="flex-1 flex items-center">
             <div className="flex-shrink-0 flex items-center">
-              <Link href="/" className="text-3xl font-black">
+              <Link href="/" className="text-xl font-bold">
                 Yuya Toyoizumi
               </Link>
             </div>
             <div className="hidden sm:ml-12 sm:flex sm:items-center">
-              <div className="space-x-6 text-sm font-medium">
+              <div className="space-x-6">
                 <Link href="/">Home</Link>
                 <Link href="/works">works</Link>
                 <Link href="/posts">posts</Link>
