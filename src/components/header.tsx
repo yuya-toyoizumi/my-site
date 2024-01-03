@@ -35,6 +35,7 @@ export const Header = () => {
                 <Link href="/works">works</Link>
                 <Link href="/notes">notes</Link>
                 <Link href="/uses">uses</Link>
+                <Link href="https://github.com/yuya-toyoizumi">sources</Link>
               </div>
             </div>
           </div>
@@ -49,6 +50,7 @@ export const Header = () => {
           <Link href="/works">works</Link>
           <Link href="/notes">notes</Link>
           <Link href="/uses">uses</Link>
+          <Link href="https://github.com/yuya-toyoizumi">sources</Link>
         </div>
       </div>
     </nav>
