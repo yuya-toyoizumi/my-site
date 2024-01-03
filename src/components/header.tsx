@@ -9,14 +9,14 @@ export const Header = () => {
   const toggleMobileMenu = () => setIsMobileOpen(!isMobileOpen);
 
   return (
-    <nav>
+    <nav className='sticky top-0 z-2 bg-[#2c363980] backdrop-blur-lg'>
       <div className="container max-w-3xl mx-auto px-4">
         <div className="relative flex items-center justify-between h-16">
           <div className="absolute inset-y-0 right-0 flex sm:hidden">
             <button
               onClick={toggleMobileMenu}
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-black focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md focus:outline-none"
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
