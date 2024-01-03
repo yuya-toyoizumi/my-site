@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -15,6 +16,10 @@ export default function Home() {
           />
         </div>
         <p>Hello, I am a software developer based in Japan.</p>
+      </section>
+      <section className='my-8 sm:my-12'>
+        <h3 className='text-xl font-bold my-2'>Contact</h3>
+        <p>Contact me at <Link href='mailto:gbr.eng123@gmail.com'>gbr.eng123@gmail.com</Link>.</p>
       </section>
     </>
   );
