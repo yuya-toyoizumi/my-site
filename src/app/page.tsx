@@ -19,6 +19,30 @@ export default function Home() {
           <p>Hello, I am a software developer based in Japan.</p>
         </section>
         <section>
+          <h3 className='text-xl font-bold my-2'>Education</h3>
+          <div className="flex flex-col sm:flex-row sm:gap-4">
+            <p className="font-bold">2010-2014</p>
+            <p>Bachelor of Economics, Sophia university.</p>
+          </div>
+        </section>
+        <section>
+          <h3 className='text-xl font-bold my-2'>Experience</h3>
+          <div className="flex flex-col gap-2">
+            <div className="flex flex-col sm:flex-row sm:gap-4">
+              <p className="font-bold">2014-2018</p>
+              <p>Corporate sales, Sony Group</p>
+            </div>
+            <div className="flex flex-col sm:flex-row sm:gap-4">
+              <p className="font-bold">2019-2020</p>
+              <p>Travel</p>
+            </div>
+            <div className="flex flex-col sm:flex-row sm:gap-4">
+              <p className="font-bold">2020-present</p>
+              <p>Software developer, currently mofmof Inc.</p>
+            </div>
+          </div>
+        </section>
+        <section>
           <h3 className='text-xl font-bold my-2'>Loves</h3>
           <p>
             Traveling, Music, Art, Nature
