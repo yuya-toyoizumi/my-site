@@ -21,7 +21,7 @@ export default function Home() {
         <section>
           <h3 className='text-xl font-bold my-2'>Education</h3>
           <div className="flex flex-col sm:flex-row sm:gap-4">
-            <p className="font-bold">2010-2014</p>
+            <p className="font-bold">2010-2014:</p>
             <p>Bachelor of Economics, Sophia university.</p>
           </div>
         </section>
@@ -29,15 +29,15 @@ export default function Home() {
           <h3 className='text-xl font-bold my-2'>Experience</h3>
           <div className="flex flex-col gap-2">
             <div className="flex flex-col sm:flex-row sm:gap-4">
-              <p className="font-bold">2014-2018</p>
+              <p className="font-bold">2014-2018:</p>
               <p>Corporate sales, Sony Group</p>
             </div>
             <div className="flex flex-col sm:flex-row sm:gap-4">
-              <p className="font-bold">2019-2020</p>
+              <p className="font-bold">2019-2020:</p>
               <p>Travel</p>
             </div>
             <div className="flex flex-col sm:flex-row sm:gap-4">
-              <p className="font-bold">2020-present</p>
+              <p className="font-bold">2020-present:</p>
               <p>Software developer, currently mofmof Inc.</p>
             </div>
           </div>
@@ -47,6 +47,14 @@ export default function Home() {
           <p>
             Traveling, Music, Art, Nature
           </p>
+        </section>
+        <section>
+          <h3 className='text-xl font-bold my-2'>On the web</h3>
+          <div className="flex flex-col gap-2">
+            <Link href="https://github.com/yuya-toyoizumi" target="_blank">GitHub</Link>
+            <Link href="https://www.instagram.com/yuya_toyoizumi" target="_blank">Instagram</Link>
+            <Link href="https://www.linkedin.com/in/yuya-toyoizumi" target="_blank">LinkedIn</Link>
+          </div>
         </section>
         <section>
           <h3 className='text-xl font-bold my-2'>Contact</h3>
