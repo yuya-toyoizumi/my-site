@@ -19,6 +19,12 @@ export default function Home() {
           <p>Hello, I am a software developer based in Japan.</p>
         </section>
         <section>
+          <h3 className='text-xl font-bold my-2'>Loves</h3>
+          <p>
+            Traveling, Music, Art, Nature
+          </p>
+        </section>
+        <section>
           <h3 className='text-xl font-bold my-2'>Contact</h3>
           <p>
             Feel free to reach out to me at <Link href='mailto:gbr.eng123@gmail.com'>gbr.eng123@gmail.com</Link> or connect with me on social media.
