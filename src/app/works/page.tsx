@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link';
 
 export default function Works() {
   return (
@@ -22,6 +23,14 @@ export default function Works() {
               <p className='w-80'>
                 This is a drinking diary app that allows you to easily record your alcohol consumption and visualize your drinking and alcohol intake.
               </p>
+              <div className='w-full flex justify-end'>
+                <Link
+                  href='https://apps.apple.com/jp/app/酒の記録/id1661597567'
+                  target='_blank'
+                >
+                  See more -&gt;
+                </Link>
+              </div>
             </div>
             <div className='flex flex-col gap-2 items-start'>
               <h3 className='font-bold'>rhythmo</h3>
@@ -38,6 +47,13 @@ export default function Works() {
               <p className='w-80'>
                 This is a habit-forming app with personalized tracking and a heat map to visualize progress, perfect for various goals like exercise and reading.
               </p>
+              <Link
+              className='w-full flex justify-end'
+                href='https://apps.apple.com/jp/app/rhythmo/id6447278189'
+                target='_blank'
+              >
+                See more -&gt;
+              </Link>
             </div>
           </div>
         </div>
