@@ -1,5 +1,5 @@
 export default function Notes() {
   return (
-    <>notes</>
+    <>Ready soon...</>
   )
 }

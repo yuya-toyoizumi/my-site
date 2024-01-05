@@ -1,6 +1,5 @@
 export default function Uses() {
   return (
-    <>uses</>
+    <>Ready soon...</>
   )
 }
-
