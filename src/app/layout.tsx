@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Courier_Prime } from "next/font/google";
+import { GoogleTagManager } from '@next/third-parties/google' 
 import "./globals.css";
 import { Header } from "@/components/header";
 import Footer from "@/components/footer";
@@ -28,6 +29,7 @@ export default function RootLayout({
         </div>
         <Footer />
       </body>
+      <GoogleTagManager gtmId='GTM-NX9DSX7' />
     </html>
   );
 }
