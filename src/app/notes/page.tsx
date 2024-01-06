@@ -1,5 +1,3 @@
 export default function Notes() {
-  return (
-    <>Ready soon...</>
-  )
+  return <>Ready soon...</>;
 }

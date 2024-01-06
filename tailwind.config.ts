@@ -14,7 +14,7 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       spacing: {
-        'screen-without-header-and-footer': 'calc(100vh - 64px * 2)',
+        "screen-without-header-and-footer": "calc(100vh - 64px * 2)",
       },
     },
   },

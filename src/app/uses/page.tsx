@@ -1,5 +1,3 @@
 export default function Uses() {
-  return (
-    <>Ready soon...</>
-  )
+  return <>Ready soon...</>;
 }

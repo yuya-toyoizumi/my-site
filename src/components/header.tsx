@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Link from 'next/link';
+import { useState } from "react";
+import Link from "next/link";
 import { MdMenu } from "react-icons/md";
 
 export const Header = () => {
@@ -9,7 +9,7 @@ export const Header = () => {
   const toggleMobileMenu = () => setIsMobileOpen(!isMobileOpen);
 
   return (
-    <nav className='sticky top-0 z-2 bg-[#2c363980] backdrop-blur-lg'>
+    <nav className="sticky top-0 z-2 bg-[#2c363980] backdrop-blur-lg">
       <div className="container max-w-3xl mx-auto px-4">
         <div className="relative flex items-center justify-between h-16">
           <div className="absolute inset-y-0 right-0 flex sm:hidden">
@@ -35,7 +35,9 @@ export const Header = () => {
                 <Link href="/works">works</Link>
                 <Link href="/notes">notes</Link>
                 <Link href="/uses">uses</Link>
-                <Link href="https://github.com/yuya-toyoizumi" target="_blank">sources</Link>
+                <Link href="https://github.com/yuya-toyoizumi" target="_blank">
+                  sources
+                </Link>
               </div>
             </div>
           </div>
@@ -50,9 +52,11 @@ export const Header = () => {
           <Link href="/works">works</Link>
           <Link href="/notes">notes</Link>
           <Link href="/uses">uses</Link>
-          <Link href="https://github.com/yuya-toyoizumi" target="_blank">sources</Link>
+          <Link href="https://github.com/yuya-toyoizumi" target="_blank">
+            sources
+          </Link>
         </div>
       </div>
     </nav>
   );
-}
+};
