@@ -16,9 +16,23 @@ const config: Config = {
       spacing: {
         "screen-without-header-and-footer": "calc(100svh - 64px * 2)",
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            li: {
+              "&::marker": {
+                color: "#d1d5db",
+              },
+            },
+            blockquote: {
+              borderLeftColor: "#f3f4f6",
+            },
+          },
+        },
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],
-  darkMode: 'class',
+  darkMode: "class",
 };
 export default config;
