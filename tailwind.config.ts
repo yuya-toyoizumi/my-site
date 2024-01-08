@@ -38,6 +38,9 @@ const config: Config = {
             h6: {
               color: "#fefefe",
             },
+            a: {
+              color: "#fefefe",
+            },
           },
         },
       },
