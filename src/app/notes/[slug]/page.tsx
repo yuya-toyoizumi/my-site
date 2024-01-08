@@ -45,7 +45,7 @@ export default async function Note({ params }: Props) {
   }
 
   return (
-    <article className="prose">
+    <article className="prose dark:prose-invert">
       <header>
         <h1>{note.title}</h1>
         <p>{format(parseISO(note.date), "MMMM dd, yyyy")}</p>

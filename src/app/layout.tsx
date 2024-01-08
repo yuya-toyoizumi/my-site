@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body className={courierPrime.className}>
         <Header />
         <div className="container max-w-3xl mx-auto px-4 py-8 sm:py-12 min-h-screen-without-header-and-footer">

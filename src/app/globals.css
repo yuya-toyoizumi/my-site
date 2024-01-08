@@ -13,7 +13,7 @@ body {
 /* rehype-code-titles */
 
 .rehype-code-title {
-  @apply px-4 py-1 text-sm font-mono font-bold bg-[#22292c] rounded-t-md w-fit;
+  @apply px-2 pt-1 text-sm bg-[#22292c] rounded-t-md w-fit;
 }
 
 .rehype-code-title + pre {
