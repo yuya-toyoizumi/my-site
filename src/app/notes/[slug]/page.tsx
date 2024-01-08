@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { allNotes } from "contentlayer/generated";
+import { format, parseISO } from "date-fns"
+import { Mdx } from "@/components/mdx-components"
 
 type Props = {
   params: {
@@ -42,5 +44,15 @@ export default async function Note({ params }: Props) {
     notFound();
   }
 
-  return <article className="prose dark:prose-invert">{note.title}</article>;
+  return (
+    <article className="prose dark:prose-invert">
+      <header className="mb-8">
+        <h2 className="text-xl font-bold mb-2">{note.title}</h2>
+        <p className="">
+        {format(parseISO(note.date), "MMMM dd, yyyy")}
+        </p>
+      </header>
+      <Mdx code={note.body.code} />
+    </article>
+  );
 }
