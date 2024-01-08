@@ -2,7 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/* prism theme for syntax highlighting */
+@import "../assets/css/prism-nord.css";
+
 body {
   background-color: #2c3639;
   color: #fefefe;
+}
+
+/* rehype-code-titles */
+
+.rehype-code-title {
+  @apply px-4 py-1 text-sm font-mono font-bold bg-[#22292c] rounded-t-md w-fit;
+}
+
+.rehype-code-title + pre {
+  @apply mt-0 rounded-tl-none;
 }
