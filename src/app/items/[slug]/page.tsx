@@ -49,7 +49,7 @@ export default async function Item({ params }: Props) {
       <div className="w-full">
         <Image
           className="border"
-          src="/items/hhkb-professional-hybrid-type-s/main.png"
+          src={item.image}
           width={16}
           height={9}
           layout="responsive"
