@@ -19,13 +19,27 @@ const config: Config = {
       typography: {
         DEFAULT: {
           css: {
-            li: {
-              "&::marker": {
-                color: "#d1d5db",
-              },
+            color: "#fefefe",
+            h1: {
+              color: "#fefefe",
             },
-            blockquote: {
-              borderLeftColor: "#f3f4f6",
+            h2: {
+              color: "#fefefe",
+            },
+            h3: {
+              color: "#fefefe",
+            },
+            h4: {
+              color: "#fefefe",
+            },
+            h5: {
+              color: "#fefefe",
+            },
+            h6: {
+              color: "#fefefe",
+            },
+            a: {
+              color: "#fefefe",
             },
           },
         },
@@ -33,6 +47,5 @@ const config: Config = {
     },
   },
   plugins: [require("@tailwindcss/typography")],
-  darkMode: "class",
 };
 export default config;

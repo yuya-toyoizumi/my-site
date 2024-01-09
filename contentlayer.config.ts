@@ -7,7 +7,7 @@ import rehypePrismPlus from "rehype-prism-plus";
 
 const Note = defineDocumentType(() => ({
   name: "Note",
-  filePathPattern: `**/*.mdx`,
+  filePathPattern: `notes/**/*.mdx`,
   contentType: "mdx",
   fields: {
     title: {
@@ -24,14 +24,33 @@ const Note = defineDocumentType(() => ({
   computedFields: {
     slug: {
       type: "string",
-      resolve: (doc) => `${doc._raw.flattenedPath}`,
+      resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/"),
+    },
+  },
+}));
+
+const Item = defineDocumentType(() => ({
+  name: "Item",
+  filePathPattern: `items/**/*.mdx`,
+  contentType: "mdx",
+  fields: {
+    title: {
+      type: "string",
+      description: "The title of the item",
+      required: true,
+    },
+  },
+  computedFields: {
+    slug: {
+      type: "string",
+      resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/"),
     },
   },
 }));
 
 export default makeSource({
-  contentDirPath: "notes",
-  documentTypes: [Note],
+  contentDirPath: "contents",
+  documentTypes: [Note, Item],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [

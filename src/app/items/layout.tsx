@@ -1,10 +1,10 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Uses | Yuya Toyoizumi",
+  title: "Items | Yuya Toyoizumi",
 };
 
-export default function UsesLayout({
+export default function ItemsLayout({
   children,
 }: {
   children: React.ReactNode;

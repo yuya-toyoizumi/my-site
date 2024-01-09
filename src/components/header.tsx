@@ -34,7 +34,7 @@ export const Header = () => {
               <div className="space-x-6">
                 <Link href="/works">works</Link>
                 <Link href="/notes">notes</Link>
-                <Link href="/uses">uses</Link>
+                <Link href="/items">items</Link>
                 <Link href="https://github.com/yuya-toyoizumi" target="_blank">
                   sources
                 </Link>
@@ -51,7 +51,7 @@ export const Header = () => {
         <div className="flex flex-col pt-2 pb-6 space-y-4 border-b border-gray-200 px-2">
           <Link href="/works">works</Link>
           <Link href="/notes">notes</Link>
-          <Link href="/uses">uses</Link>
+          <Link href="/items">items</Link>
           <Link href="https://github.com/yuya-toyoizumi" target="_blank">
             sources
           </Link>
