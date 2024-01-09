@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { allItems } from "contentlayer/generated";
 import { Mdx } from "@/components/mdx-components";
@@ -10,7 +11,6 @@ type Props = {
 };
 
 async function getItemFromParams(params: Props["params"]) {
-  console.log(params)
   const slug = params.slug;
   const item = allItems.find((item) => item.slug === slug);
 
@@ -46,6 +46,19 @@ export default async function Item({ params }: Props) {
 
   return (
     <article className="prose dark:prose-invert max-w-none">
+      <div className="w-full">
+        <Image
+          className="border"
+          src="/items/hhkb-professional-hybrid-type-s.png"
+          width={16}
+          height={9}
+          layout="responsive"
+          alt={item.title}
+        />
+      </div>
+      <header>
+        <h1 className="text-lg">{item.title}</h1>
+      </header>
       <Mdx code={item.body.code} />
     </article>
   );
