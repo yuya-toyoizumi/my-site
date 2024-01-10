@@ -39,6 +39,11 @@ const Item = defineDocumentType(() => ({
       description: "The title of the item",
       required: true,
     },
+    image: {
+      type: "string",
+      description: "The image of the item",
+      required: true,
+    }
   },
   computedFields: {
     slug: {
