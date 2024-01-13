@@ -1,0 +1,6 @@
+{
+  "extends": ["config:base"],
+  "labels": ["dependencies"],
+  "timezone": "Asia/Tokyo",
+  "schedule": ["every weekend"]
+}
