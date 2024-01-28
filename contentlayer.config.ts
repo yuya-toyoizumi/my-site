@@ -43,7 +43,31 @@ const Item = defineDocumentType(() => ({
       type: "string",
       description: "The image of the item",
       required: true,
-    }
+    },
+  },
+  computedFields: {
+    slug: {
+      type: "string",
+      resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/"),
+    },
+  },
+}));
+
+const Work = defineDocumentType(() => ({
+  name: "Work",
+  filePathPattern: `works/**/*.mdx`,
+  contentType: "mdx",
+  fields: {
+    title: {
+      type: "string",
+      description: "The title of the work",
+      required: true,
+    },
+    image: {
+      type: "string",
+      description: "The image of the work",
+      required: true,
+    },
   },
   computedFields: {
     slug: {
@@ -55,7 +79,7 @@ const Item = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: "contents",
-  documentTypes: [Note, Item],
+  documentTypes: [Note, Item, Work],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
