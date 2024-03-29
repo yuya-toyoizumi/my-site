@@ -19,13 +19,17 @@ const config: Config = {
       typography: {
         DEFAULT: {
           css: {
+            color: "#fefefe",
+            a: {
+              color: "#fefefe",
+            },
             li: {
               "&::marker": {
-                color: "#d1d5db",
+                color: "#fefefe",
               },
             },
             blockquote: {
-              borderLeftColor: "#f3f4f6",
+              borderLeftColor: "#fefefe",
             },
           },
         },

@@ -8,6 +8,7 @@
 body {
   background-color: #2c3639;
   color: #fefefe;
+  word-wrap: break-word;
 }
 
 /* rehype-code-titles */
