@@ -1,0 +1,122 @@
+---
+title: Data Mapper vs Active Record
+date: 2024-05-21
+---
+
+## Features
+
+### Data Mapper
+
+- Separates model classes from database operations.
+- Database operations are managed by a mapper class.
+- Objects are not aware of the existence of the database.
+
+<p>
+  <a href="https://martinfowler.com/eaaCatalog/dataMapper.html" target="_blank">
+    Data Mapper - Martin Fowler
+  </a>
+</p>
+
+### Active Record
+
+- Model classes themselves contain methods for database operations.
+- Database rows are represented as instances of the model.
+
+<p>
+  <a href="https://www.martinfowler.com/eaaCatalog/activeRecord.html" target="_blank">
+    Active Record - Martin Fowler
+  </a>
+</p>
+
+## Benefits
+
+### Data Mapper
+
+- High flexibility and maintainability.
+- Suitable for handling complex domain logic.
+
+### Active Record
+
+- Low learning curve.
+- Rapid development.
+
+## Suitable Use Cases
+
+### Data Mapper
+
+- Cases with complex queries and transactions.
+
+### Active Record
+
+- Small projects or cases with relatively simple queries and transactions.
+
+### Sample Code
+
+### Data Mapper
+
+```python:sample.py
+from sqlalchemy import create_engine, Column, Integer, String, ForeignKey
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker, relationship
+
+engine = create_engine('sqlite:///example.db')
+Base = declarative_base()
+
+class User(Base):
+    __tablename__ = 'users'
+    id = Column(Integer, primary_key=True)
+    name = Column(String)
+    orders = relationship("Order", back_populates="user")
+
+class Order(Base):
+    __tablename__ = 'orders'
+    id = Column(Integer, primary_key=True)
+    description = Column(String)
+    user_id = Column(Integer, ForeignKey('users.id'))
+    user = relationship("User", back_populates="orders")
+
+Base.metadata.create_all(engine)
+Session = sessionmaker(bind=engine)
+session = Session()
+```
+
+### Active Record
+
+```rb:sample.rb
+class User < ApplicationRecord
+  has_many :orders
+end
+
+class Order < ApplicationRecord
+  belongs_to :user
+end
+
+user = User.create(name: 'Alice')
+order = user.orders.create(description: 'First Order')
+```
+
+## Libraries
+
+### Data Mapper
+
+- Python - SQLAlchemy
+- Java - Hibernate
+- .NET - Entity Framework
+- JavaScript - TypeORM (Node.js)
+- Go - GORM
+
+### Active Record
+
+- Ruby on Rails - Active Record
+- PHP - Eloquent (Laravel)
+- Java - ActiveJDBC
+- Python - peewee
+- C# - ActiveRecord (Castle Project)
+- JavaScript - Sequelize (Node.js)
+- Swift - Core Data (Apple)
+
+<p>
+  <a href="https://www.buymeacoffee.com/yuyatoyoizumi" target="_blank">
+    buy me a coffee
+  </a>
+</p>
