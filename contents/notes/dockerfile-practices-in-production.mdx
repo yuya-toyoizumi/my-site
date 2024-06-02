@@ -1,0 +1,174 @@
+---
+title: Dockerfile practices in production
+date: 2024-06-02
+---
+
+## Use official docker image as base image
+
+```Dockerfile
+// not do this
+
+FROM ubuntu
+
+RUN apt-get update && apt-get install -y \
+	node \
+	&& rm -rf /var/lib/apt/lists/*
+
+...
+
+// do this
+
+FROM node
+
+...
+```
+
+### reason
+
+- low risk of vulnerability
+- high reliability
+- high performance
+- easy to maintain
+- easy to use same environment
+
+## Fixate version
+
+```Dockerfile
+// not do this
+
+FROM node
+
+...
+
+// do this
+
+FROM node:17.0.1
+
+...
+```
+
+### reason
+
+- 'FROM node' means 'FROM node:latest'. Latest tag is unpredictable and different version might be installed.
+
+## Use small sized official images(if no need to specific system utilities)
+
+```Dockerfile
+// not do this
+
+FROM node:17.0.1
+
+...
+
+// do this
+
+FROM node:17.0.1-alpine
+
+...
+```
+
+### reason
+
+- low risk of vulnerability
+- faster and less storage
+
+## Optimize caching image layers
+
+```Dockerfile
+// not do this
+
+FROM node:17.0.1-alpine
+
+WORKDIR /app
+
+COPY . .
+
+RUN npm ci --production
+
+CMD ["node", "dist/app.js"]
+
+...
+
+// do this
+
+FROM node:17.0.1-alpine
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm ci --production
+
+COPY . .
+
+CMD ["node", "dist/app.js"]
+```
+
+Order Dockerfile commands from least to most frequestly changing like above.
+
+reason
+
+- faster image building and fetching
+
+## Use .dockerignore to explicitly exclude files and folders
+
+### reason
+
+- reduce image size
+- prevent secrets exposure unintentionally
+
+## Use multi-stage build
+
+```Dockerfile
+FROM node:17.0.1-alpine AS build
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm ci --production
+
+COPY . .
+
+RUN npm run build
+
+FROM node:17.0.1-alpine AS production
+
+WORKDIR /app
+
+COPY --from=build /app/package*.json ./
+COPY --from=build /app/node_modules ./node_modules
+COPY --from=build /app/dist ./dist
+
+CMD ["node", "dist/app.js"]
+```
+
+### reason
+
+- low risk of vulnerability
+- smaller image size
+
+## Use the least privileged user
+
+```Dockerfile
+FROM node:17.0.1-alpine
+RUN chown -R node:node /node
+USER node
+```
+
+### reason
+
+- low risk of vulnerability
+
+## Scan images for vulnerabilities
+
+### reason
+
+- low risk of vulnerability
+
+## Lint Dockerfile
+
+### reason
+
+- high reliability
+- speed up developping
