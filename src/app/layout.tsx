@@ -10,7 +10,10 @@ const courierPrime = Courier_Prime({
   subsets: ["latin"],
 });
 
-const baseUrl = process.env.NODE_ENV === 'production' ? 'https://yuyatoyoizumi.com' : 'http://localhost:3000';
+const baseUrl =
+  process.env.NODE_ENV === "production"
+    ? "https://yuyatoyoizumi.com"
+    : "http://localhost:3000";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
