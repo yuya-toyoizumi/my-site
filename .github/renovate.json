@@ -3,5 +3,5 @@
   "labels": ["dependencies"],
   "timezone": "Asia/Tokyo",
   "schedule": ["every weekend"],
-  "ignorePaths": ["contents/*"]
+  "ignorePaths": ["contents/**"]
 }
