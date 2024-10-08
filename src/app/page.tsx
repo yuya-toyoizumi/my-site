@@ -58,6 +58,9 @@ export default function Home() {
             >
               Instagram
             </Link>
+            <Link href="https://x.com/yuyatoyoizumi" target="_blank">
+              X
+            </Link>
             <Link
               href="https://www.linkedin.com/in/yuya-toyoizumi"
               target="_blank"
