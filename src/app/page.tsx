@@ -38,7 +38,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col sm:flex-row sm:gap-4">
               <p className="font-bold">2020-present:</p>
-              <p>Software developer, currently mofmof Inc.</p>
+              <p>Software developer, currently freelancing</p>
             </div>
           </div>
         </section>
