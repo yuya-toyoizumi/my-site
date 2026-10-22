@@ -1,5 +1,5 @@
-import { Image } from "@/components/Image";
 import { getMDXComponent } from "next-contentlayer2/hooks";
+import { Image } from "@/components/Image";
 
 type Props = {
   code: string;

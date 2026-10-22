@@ -1,7 +1,7 @@
-import { Metadata } from "next";
+import { allItems } from "contentlayer/generated";
+import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { allItems } from "contentlayer/generated";
 import { Mdx } from "@/components/mdx-components";
 
 type Props = {

@@ -1,7 +1,7 @@
-import { Metadata } from "next";
-import { notFound } from "next/navigation";
 import { allNotes } from "contentlayer/generated";
 import { format, parseISO } from "date-fns";
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { Mdx } from "@/components/mdx-components";
 
 type Props = {
