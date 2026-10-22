@@ -1,22 +1,18 @@
-import { Metadata } from "next";
+import { allWorks } from "contentlayer/generated";
+import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { allWorks } from "contentlayer/generated";
 import { Mdx } from "@/components/mdx-components";
 
 type Props = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 async function getWorkFromParams(params: Props["params"]) {
-  const slug = params.slug;
+  const { slug } = await params;
   const work = allWorks.find((work) => work.slug === slug);
-
-  if (!work) {
-    null;
-  }
 
   return work;
 }
@@ -52,7 +48,8 @@ export default async function Work({ params }: Props) {
           src={work.image}
           width={16}
           height={9}
-          layout="responsive"
+          sizes="100vw"
+          style={{ width: "100%", height: "auto" }}
           alt={work.title}
         />
       </div>

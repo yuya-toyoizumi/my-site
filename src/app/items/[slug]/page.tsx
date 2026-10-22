@@ -1,22 +1,18 @@
-import { Metadata } from "next";
+import { allItems } from "contentlayer/generated";
+import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { allItems } from "contentlayer/generated";
 import { Mdx } from "@/components/mdx-components";
 
 type Props = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 async function getItemFromParams(params: Props["params"]) {
-  const slug = params.slug;
+  const { slug } = await params;
   const item = allItems.find((item) => item.slug === slug);
-
-  if (!item) {
-    null;
-  }
 
   return item;
 }
@@ -52,7 +48,8 @@ export default async function Item({ params }: Props) {
           src={item.image}
           width={16}
           height={9}
-          layout="responsive"
+          sizes="100vw"
+          style={{ width: "100%", height: "auto" }}
           alt={item.title}
         />
       </div>

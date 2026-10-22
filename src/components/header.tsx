@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
+import { useState } from "react";
 import { MdMenu } from "react-icons/md";
 
 export const Header = () => {

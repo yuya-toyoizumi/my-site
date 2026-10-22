@@ -1,7 +1,23 @@
 {
-  "extends": ["config:base"],
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
   "labels": ["dependencies"],
   "timezone": "Asia/Tokyo",
   "schedule": ["every weekend"],
-  "ignorePaths": ["contents/**"]
+  "ignorePaths": ["contents/**"],
+  "minimumReleaseAge": "3 days",
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["every weekend"]
+  },
+  "vulnerabilityAlerts": {
+    "labels": ["dependencies", "security"]
+  },
+  "packageRules": [
+    {
+      "description": "Keep .node-version and engines.node on the same Node.js version",
+      "matchDepNames": ["node"],
+      "groupName": "Node.js"
+    }
+  ]
 }
