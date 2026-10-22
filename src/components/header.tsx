@@ -16,7 +16,7 @@ export const Header = () => {
             <button
               onClick={toggleMobileMenu}
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md focus:outline-hidden"
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
@@ -25,7 +25,7 @@ export const Header = () => {
             </button>
           </div>
           <div className="flex-1 flex items-center">
-            <div className="flex-shrink-0 flex items-center">
+            <div className="shrink-0 flex items-center">
               <Link href="/" className="text-xl font-bold">
                 Yuya Toyoizumi
               </Link>
