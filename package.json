@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint src",
     "format": "prettier --write \"**/*.{ts,tsx,md,mdx}\"",
     "secretlint": "secretlint --maskSecrets --secretlintignore .gitignore '**/*'"
   },
@@ -14,13 +14,13 @@
     "node": "24.x"
   },
   "dependencies": {
-    "@next/third-parties": "^14.0.4",
+    "@next/third-parties": "^16.4.2",
     "contentlayer2": "0.5.8",
     "date-fns": "^4.0.0",
-    "next": "^14.2.3",
+    "next": "^16.4.2",
     "next-contentlayer2": "0.5.8",
-    "react": "^18",
-    "react-dom": "^18",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
     "react-icons": "^5.0.0",
     "sharp": "^0.33.2"
   },
@@ -28,8 +28,8 @@
     "@secretlint/secretlint-rule-preset-recommend": "^9.0.0",
     "@tailwindcss/typography": "^0.5.10",
     "@types/node": "^24.19.2",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
     "@typescript-eslint/eslint-plugin": "^6.18.1",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",

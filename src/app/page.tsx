@@ -11,7 +11,8 @@ export default function Home() {
               className="rounded-full border-2 border-slate-200"
               src="/images/profile-image.png"
               alt="Profile image"
-              layout="responsive"
+              sizes="100vw"
+              style={{ width: "100%", height: "auto" }}
               width={100}
               height={100}
             />

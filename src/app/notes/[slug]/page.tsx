@@ -5,18 +5,14 @@ import { format, parseISO } from "date-fns";
 import { Mdx } from "@/components/mdx-components";
 
 type Props = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 async function getNoteFromParams(params: Props["params"]) {
-  const slug = params.slug;
+  const { slug } = await params;
   const note = allNotes.find((note) => note.slug === slug);
-
-  if (!note) {
-    null;
-  }
 
   return note;
 }
