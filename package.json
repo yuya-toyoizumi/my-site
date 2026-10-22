@@ -10,6 +10,9 @@
     "format": "prettier --write \"**/*.{ts,tsx,md,mdx}\"",
     "secretlint": "secretlint --maskSecrets --secretlintignore .gitignore '**/*'"
   },
+  "engines": {
+    "node": "24.x"
+  },
   "dependencies": {
     "@next/third-parties": "^14.0.4",
     "contentlayer2": "0.5.8",
@@ -24,7 +27,7 @@
   "devDependencies": {
     "@secretlint/secretlint-rule-preset-recommend": "^9.0.0",
     "@tailwindcss/typography": "^0.5.10",
-    "@types/node": "^22.0.0",
+    "@types/node": "^24.19.2",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@typescript-eslint/eslint-plugin": "^6.18.1",
