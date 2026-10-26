@@ -40,6 +40,6 @@
     "remark-gfm": "^4.0.1",
     "secretlint": "^9.0.0",
     "tailwindcss": "^4.3.3",
-    "typescript": "^5"
+    "typescript": "^7.0.0"
   }
 }
