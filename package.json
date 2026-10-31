@@ -12,7 +12,7 @@
     "secretlint": "secretlint --maskSecrets --secretlintignore .gitignore '**/*'"
   },
   "engines": {
-    "node": "24.x"
+    "node": "26.x"
   },
   "dependencies": {
     "@next/third-parties": "^16.4.2",
